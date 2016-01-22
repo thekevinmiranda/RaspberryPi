@@ -1,0 +1,11 @@
+To solve transmission files not found error on reboot
+
+http://posts.danharper.me/raspberry-pi-2-auto-mount-usb/
+
+sudo blkid
+copy the uuid of the pendrive
+
+sudo nano /etc/fstab
+
+add this line at the end:
+UUID=6953CB896AE8C098 /media/torrents ntfs auto,users,rw,uid=1000,gid=100,umask=0002 0 0

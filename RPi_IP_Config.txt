@@ -1,0 +1,30 @@
+auto lo
+iface lo inet loopback
+
+auto eth0
+allow-hotplug eth0
+iface eth0 inet manual
+
+auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet manual
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+
+auto wlan1
+allow-hotplug wlan1
+iface wlan1 inet manual
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+
+
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+0.0.0.0         192.168.2.1     0.0.0.0         UG        0 0          0 eth0
+192.168.2.0     0.0.0.0         255.255.255.0   U         0 0          0 eth0
+
+eth0      Link encap:Ethernet  HWaddr b8:27:eb:77:55:f8
+          inet addr:192.168.2.7  Bcast:192.168.2.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:116189 errors:0 dropped:2 overruns:0 frame:0
+          TX packets:184875 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:54174002 (51.6 MiB)  TX bytes:74975259 (71.5 MiB)

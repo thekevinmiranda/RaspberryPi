@@ -1,0 +1,1 @@
+Change user=pi to User=root to solve permission issues in transmission configuration.

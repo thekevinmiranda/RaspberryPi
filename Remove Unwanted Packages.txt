@@ -1,0 +1,20 @@
+Remove Extra Packages
+---------------------
+The exact command I used to remove the packages:
+
+•	sudo apt-get remove --purge wolfram-engine penguinspuzzle scratch dillo squeak-vm squeak-plugins-scratch sonic-pi idle idle3 netsurf-gtk netsurf-common
+
+Next, run a little bit of housekeeping:
+
+•	sudo apt-get autoremove
+•	sudo apt-get clean
+•	And then remove example files and optional files:
+
+•	rm -rf /home/pi/python_games
+•	sudo rm -rf /opt/vc
+
+Remove LibreOffice
+------------------
+$ sudo apt-get remove --purge libreoffice*
+$ sudo apt-get clean
+$ sudo apt-get autoremove
