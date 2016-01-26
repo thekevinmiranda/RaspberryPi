@@ -3,7 +3,7 @@ To solve transmission files not found error on reboot
 http://posts.danharper.me/raspberry-pi-2-auto-mount-usb/
 
 sudo blkid
-copy the uuid of the pendrive
+copy the UUID of the pendrive
 
 sudo nano /etc/fstab
 
